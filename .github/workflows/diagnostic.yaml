@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Good afternoon Francis!
+      - name: Run single script
+        run: |
+          echo "write a script is very difficult to learn"
+          echo "DevOps activity is very complex to masterize"
